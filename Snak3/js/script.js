@@ -16,5 +16,27 @@ const automobili = [
 
 //variabili globali 
 const autoBenzina = [];
-const autoDisel = [];
-const autoVarie = [];
+const autoDiesel  = [];
+const autoVarie   = [];
+
+let auto = automobili[0];
+console.log(auto);
+
+let alimentazione = automobili[0].alimentazione;
+console.log(alimentazione);
+
+
+//ciclo for per inserire auto nell'array corrispondente 
+for ( let i = 0 ; i < automobili.length ; i++) {
+    if (alimentazione === "benzina" ) {
+        autoBenzina.push(auto);
+    } else if (alimentazione === "diesel") {
+        autoDiesel.push(auto);
+    } else {
+        autoVarie.push(auto);
+    }
+} 
+
+console.log(autoBenzina);
+console.log(autoDiesel);
+console.log(autoVarie);
