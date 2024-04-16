@@ -22,7 +22,7 @@ const autoVarie   = [];
 let auto = automobili[0];
 console.log(auto);
 
-let alimentazione = automobili[0].alimentazione;
+let alimentazione = automobili.alimentazione;
 console.log(alimentazione);
 
 

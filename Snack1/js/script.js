@@ -21,22 +21,15 @@ const bikesList = [
         }
 ];
 
+let lightBike = bikesList[0];
+console.log(lightBike);
 
-
-
-//destructuring
-const bike = document.getElementById("bike");
-
-
-for (let i = 0 ; i < bikesList.length ; i++) {
-    let weight = bikesList[i].weight;
-    let name = bikesList[i].name;
-    let minWeight = bikesList[i].weight
-
-    if (minWeight < weight) {
-        console.log();
+bikesList.forEach((curBici) => {
+    console.log(curBici, lightBike);
+    if (curBici.weight < lightBike.weight) {
+        lightBike = curBici;
     }
-}
+});
 
-
-//stampo output 
+const {name, weight} = lightBike;
+console.log(`La bici più leggera è ${name} con un peso di ${weight}`);
